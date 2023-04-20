@@ -30,7 +30,7 @@ body {
 	min-width: 50px;
 	width: 8%;
 	/* left: 280px; */
-	animation: pipe-animation 0.8s infinite linear;
+	animation: pipe-animation 0.8s infinite ease-in;
 }
 
 #jeff {
@@ -41,6 +41,12 @@ body {
 	left: 30px;
 	/* border-radius: 100px; */
 	transform: scaleX(-1);
+}
+
+#cloud {
+	position: absolute;
+	animation: pipe-animation 6s infinite alternate-reverse;
+	width: 500px;
 }
 
 .jump {

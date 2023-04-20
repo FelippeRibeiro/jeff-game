@@ -52,7 +52,7 @@ const verify = setInterval(() => {
 						window.location.href = "https://www.instagram.com/ariel_bbgrl/";
 					}, 1000);
 				}
-			}, 1500);
+			}, 1000);
 		}
 	}
 }, 10);
