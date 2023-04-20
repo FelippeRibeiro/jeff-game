@@ -4,6 +4,14 @@
 	box-sizing: border-box;
 }
 
+body {
+	width: 100vw;
+	height: 98vh;
+	display: flex;
+	justify-content: center;
+	background-color: black;
+}
+
 #game-board {
 	width: 100%;
 	height: 99vh;
@@ -21,7 +29,8 @@
 	bottom: 0;
 	min-width: 50px;
 	width: 8%;
-	animation: pipe-animation 1s infinite linear;
+	/* left: 280px; */
+	animation: pipe-animation 0.8s infinite linear;
 }
 
 #jeff {
@@ -30,12 +39,12 @@
 	bottom: 0;
 	position: absolute;
 	left: 30px;
-	border-radius: 100px;
+	/* border-radius: 100px; */
 	transform: scaleX(-1);
 }
 
 .jump {
-	animation: jump 500ms ease-out;
+	animation: jump 600ms ease-out;
 }
 
 @keyframes pipe-animation {
@@ -54,25 +63,25 @@
 	}
 
 	20% {
-		bottom: 70px;
+		bottom: 90px;
 	}
 	30% {
-		bottom: 100px;
+		bottom: 150px;
 	}
 
 	40% {
-		bottom: 100px;
+		bottom: 150px;
 	}
 
 	50% {
-		bottom: 100px;
+		bottom: 150px;
 	}
 
 	60% {
-		bottom: 100px;
+		bottom: 150px;
 	}
 	70% {
-		bottom: 90px;
+		bottom: 100px;
 	}
 
 	100% {
