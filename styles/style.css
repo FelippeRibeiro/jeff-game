@@ -1,80 +1,81 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 #game-board {
-  width: 100%;
-  height: 99vh;
-  border: 1px solid black;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  background-image: url("./images/garcia.jpg");
-  background-repeat: round;
-  background-size: cover;
+	width: 100%;
+	height: 99vh;
+	border: 1px solid black;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	background-image: url("./images/garcia.jpg");
+	background-repeat: round;
+	background-size: cover;
 }
 
 #pipe {
-  position: absolute;
-  bottom: 0;
-  min-width: 50px;
-  width: 10%;
-  animation: pipe-animation 1.2s infinite linear;
+	position: absolute;
+	bottom: 0;
+	min-width: 50px;
+	width: 8%;
+	animation: pipe-animation 1s infinite linear;
 }
 
 #jeff {
-  width: 15%;
-  min-width: 50px;
-  bottom: 0;
-  position: absolute;
-  left: 30px;
-  border-radius: 100px;
+	width: 10%;
+	min-width: 50px;
+	bottom: 0;
+	position: absolute;
+	left: 30px;
+	border-radius: 100px;
+	transform: scaleX(-1);
 }
 
 .jump {
-  animation: jump 700ms ease-out;
+	animation: jump 500ms ease-out;
 }
 
 @keyframes pipe-animation {
-  from {
-    right: -80px;
-  }
+	from {
+		right: -80px;
+	}
 
-  to {
-    right: 100%;
-  }
+	to {
+		right: 100%;
+	}
 }
 
 @keyframes jump {
-  0% {
-    bottom: 0;
-  }
+	0% {
+		bottom: 0;
+	}
 
-  20% {
-    bottom: 70px;
-  }
-  30% {
-    bottom: 100px;
-  }
+	20% {
+		bottom: 70px;
+	}
+	30% {
+		bottom: 100px;
+	}
 
-  40% {
-    bottom: 100px;
-  }
+	40% {
+		bottom: 100px;
+	}
 
-  50% {
-    bottom: 100px;
-  }
+	50% {
+		bottom: 100px;
+	}
 
-  60% {
-    bottom: 100px;
-  }
-  70% {
-    bottom: 90px;
-  }
+	60% {
+		bottom: 100px;
+	}
+	70% {
+		bottom: 90px;
+	}
 
-  100% {
-    bottom: 0;
-  }
+	100% {
+		bottom: 0;
+	}
 }
