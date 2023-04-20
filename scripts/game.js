@@ -4,6 +4,7 @@ const jeff = document.getElementById("jeff");
 const pipe = document.getElementById("pipe");
 const gameboard = document.getElementById("game-board");
 const penis = pipe.cloneNode(true);
+const audio = document.getElementById("audio");
 
 const assets = [
 	"./styles/images/pipe.png",
@@ -43,6 +44,7 @@ const verify = setInterval(() => {
 			const cum = document.createElement("img");
 			cum.src = "./styles/images/jef-cum.png";
 			document.body.appendChild(cum);
+			audio.play();
 			clear = true;
 			setTimeout(() => {
 				if (confirm("Deseja Reiniciar?")) {
