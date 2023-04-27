@@ -28,6 +28,7 @@ function jump() {
 document.addEventListener("keydown", (key) => {
   if (key.key === " ") {
     if (!fistTime) {
+      jeff.src = "./styles/images/jeff-bike2.jpeg";
       fistTime = true;
       pipe.classList.add("pipeAndAnimation");
       pipe.style.display = "block";
@@ -50,7 +51,7 @@ document.addEventListener("click", () => {
 
 setInterval(() => {
   pipe.src = assets[Math.floor(Math.random() * 3)];
-}, 2400);
+}, 3000);
 
 let clear = false;
 const verify = setInterval(() => {
@@ -59,7 +60,12 @@ const verify = setInterval(() => {
     const jeffPosition = +window
       .getComputedStyle(jeff)
       .bottom.replace("px", "");
-    if (positionObstacle <= 240 && positionObstacle > 5 && jeffPosition < 45) {
+    if (
+      positionObstacle <= 240 &&
+      positionObstacle > 5 &&
+      jeffPosition < 45 &&
+      !pipe.src.includes(assets[1].replace("./", ""))
+    ) {
       pipe.style.animation = "none";
       pipe.style.left = `${positionObstacle}px`;
       gameboard.remove();
