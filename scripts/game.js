@@ -34,7 +34,15 @@ document.addEventListener("keydown", (key) => {
   if (key.key === " ") jump();
 });
 
-document.addEventListener("click", jump);
+document.addEventListener("click", () => {
+  if (!fistTime) {
+    fistTime = true;
+    pipe.classList.add("pipeAndAnimation");
+    pipe.style.display = "block";
+    return;
+  }
+  jump();
+});
 
 setInterval(() => {
   pipe.src = assets[Math.floor(Math.random() * 3)];
