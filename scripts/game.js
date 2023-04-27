@@ -43,6 +43,7 @@ document.addEventListener("keydown", (key) => {
 
 document.addEventListener("click", () => {
 	if (!fistTime) {
+		sound.play();
 		jeff.src = "./styles/images/jeff-bike2.jpeg";
 		fistTime = true;
 		pipe.classList.add("pipeAndAnimation");
