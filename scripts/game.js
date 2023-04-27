@@ -5,6 +5,7 @@ const penis = pipe.cloneNode(true);
 const audio = document.getElementById("audio");
 var root = document.querySelector(":root");
 const contador = document.getElementById("contador");
+const InitAlert = document.getElementById("alert");
 let pontos = 0;
 
 let fistTime = false;
@@ -25,13 +26,16 @@ function jump() {
 }
 
 document.addEventListener("keydown", (key) => {
-  if (!fistTime) {
-    fistTime = true;
-    pipe.classList.add("pipeAndAnimation");
-    pipe.style.display = "block";
-    return;
+  if (key.key === " ") {
+    if (!fistTime) {
+      fistTime = true;
+      pipe.classList.add("pipeAndAnimation");
+      pipe.style.display = "block";
+      InitAlert.remove();
+      return;
+    }
+    jump();
   }
-  if (key.key === " ") jump();
 });
 
 document.addEventListener("click", () => {
