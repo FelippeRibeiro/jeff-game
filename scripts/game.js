@@ -3,6 +3,7 @@ const pipe = document.getElementById("pipe");
 const gameboard = document.getElementById("game-board");
 const penis = pipe.cloneNode(true);
 const audio = document.getElementById("audio");
+const sound = document.getElementById("sound");
 var root = document.querySelector(":root");
 const contador = document.getElementById("contador");
 const InitAlert = document.getElementById("alert");
@@ -28,6 +29,7 @@ function jump() {
 document.addEventListener("keydown", (key) => {
 	if (key.key === " ") {
 		if (!fistTime) {
+			sound.play();
 			jeff.src = "./styles/images/jeff-bike2.jpeg";
 			fistTime = true;
 			pipe.classList.add("pipeAndAnimation");
@@ -72,6 +74,7 @@ const verify = setInterval(() => {
 			const cum = document.createElement("img");
 			cum.src = "./styles/images/jef-cum.png";
 			document.body.appendChild(cum);
+			sound.pause();
 			audio.play();
 			clear = true;
 			setTimeout(() => {
