@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --speed: 2s;
+}
+
 body {
   width: 100vw;
   height: 98vh;
@@ -34,7 +38,7 @@ body {
 }
 
 .pipeAndAnimation {
-  animation: pipe-animation 2s infinite ease-in;
+  animation: pipe-animation var(--speed) infinite ease-in;
 }
 
 #jeff {
@@ -49,7 +53,7 @@ body {
 
 #cloud {
   position: absolute;
-  animation: pipe-animation 6s infinite alternate-reverse;
+  animation: pipe-animation 10s infinite alternate-reverse;
   width: 500px;
 }
 

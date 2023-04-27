@@ -1,10 +1,12 @@
-const initState = document;
-console.log(initState);
 const jeff = document.getElementById("jeff");
 const pipe = document.getElementById("pipe");
 const gameboard = document.getElementById("game-board");
 const penis = pipe.cloneNode(true);
 const audio = document.getElementById("audio");
+var root = document.querySelector(":root");
+const contador = document.getElementById("contador");
+let pontos = 0;
+
 let fistTime = false;
 
 const assets = [
@@ -39,7 +41,6 @@ setInterval(() => {
 }, 2400);
 
 let clear = false;
-
 const verify = setInterval(() => {
   if (!clear && pipe.classList.contains("pipeAndAnimation")) {
     const positionObstacle = pipe.offsetLeft;
@@ -65,5 +66,7 @@ const verify = setInterval(() => {
         }
       }, 1000);
     }
+    contador.textContent = pontos;
+    pontos++;
   }
 }, 10);
