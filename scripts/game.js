@@ -22,7 +22,7 @@ function jump() {
 
   setTimeout(() => {
     jeff.classList.remove("jump");
-  }, 450);
+  }, 750);
 }
 
 document.addEventListener("keydown", (key) => {
